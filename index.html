@@ -1,20 +1,22 @@
+<html>
 <div class="container">
     <head>
     <link href="formstyle.css" rel="stylesheet">
     <title> Form con js </title>
 </head>
+
     <h2>FORM</h2>
   
     <form id="contact" action="Pagina-Confirm.html" method="post">
       <div class="left">
         <input type="text" placeholder="NOMBRE" required="required" id="nombre"/>
-        <input type="email" placeholder="EMAIL" required="required"/>
-        <input type="text" placeholder="ASUNTO" required="required"/>
-        <input type="tel" placeholder="NUMERO" required="required"/>
+        <input type="email" placeholder="EMAIL" required="required" id="email"/>
+        <input type="text" placeholder="ASUNTO" required="required" id="asunto"/>
+        <input type="tel" placeholder="NUMERO" required="required" id="numero"/>
       </div>
 
       <div class="right">
-        <textarea placeholder="MENSAJE" required="required"></textarea>
+        <textarea placeholder="MENSAJE" required="required" id="texto"></textarea>
       </div>
 
       <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
@@ -23,20 +25,43 @@
   
       <div class="g-recaptcha" data-sitekey="6LcPw_MbAAAAAP_WoNhf7XPmd1IiC-AvBqvVJjN1"></div>
 
+
+
 <script>
     function capturar(){
-function Persona(nombre,numero){
-this.nombre=bombre;
+function Persona(nombre,email,texto,numero){
+this.nombre=nombre;
+this.email=email;
+this.texto=texto;
 this.numero=numero;
 }
+console.log("Nombre de usuario: ");
 var nombreCapturar = document.getElementById("nombre").value;
 console.log(nombreCapturar);
+
+console.log("Correo de Usuario: ");
+var mailCapturar = document.getElementById("email").value;
+console.log(mailCapturar);
+
+console.log("Asunto: ");
+var asuntoCapturar = document.getElementById("asunto").value;
+console.log(asuntoCapturar);
+
+console.log("Numero telefonico: ");
+var numeroCapturar = document.getElementById("numero").value;
+console.log(numeroCapturar);
+
+console.log("Mensaje: ");
+var msgCapturar = document.getElementById("texto").value;
+console.log(msgCapturar);
 }
 </script>
 
 
+
       <div class="send-button cl">
-        <button type="submit" id="boton" onclick="capturar();">ENVIAR</button>
+    <a href="Pagina-Confirm.html"> <button type="submit" id="boton" onclick="capturar();">ENVIAR</button> </a>
       </div>
     </form>
   </div>
+  </html>
