@@ -36,7 +36,7 @@ console.log(nombreCapturar);
 
 
       <div class="send-button cl">
-        <button type="submit" id="boton" onclick="capturar();">ENVIAR</button>
+      <a href="FormJS.html"> <button type="submit" id="boton" onclick="capturar();">ENVIAR</button> </a>
       </div>
     </form>
   </div>
