@@ -29,38 +29,40 @@
 
 <script>
     function capturar(){
-function Persona(nombre,email,texto,numero){
+function Persona(nombre,email,texto,numero,asunto){
 this.nombre=nombre;
 this.email=email;
 this.texto=texto;
 this.numero=numero;
+this.asunto=asunto;
 }
-console.log("Nombre de usuario: ");
+
 var nombreCapturar = document.getElementById("nombre").value;
-console.log(nombreCapturar);
 
-console.log("Correo de Usuario: ");
 var mailCapturar = document.getElementById("email").value;
-console.log(mailCapturar);
 
-console.log("Asunto: ");
-var asuntoCapturar = document.getElementById("asunto").value;
-console.log(asuntoCapturar);
+var asuntoCapturar = document.getElementById("texto").value;
 
-console.log("Numero telefonico: ");
 var numeroCapturar = document.getElementById("numero").value;
-console.log(numeroCapturar);
 
-console.log("Mensaje: ");
-var msgCapturar = document.getElementById("texto").value;
-console.log(msgCapturar);
+var msgCapturar = document.getElementById("asunto").value;
+
+
+NewUsuario = new Persona(nombreCapturar, mailCapturar, asuntoCapturar, numeroCapturar, msgCapturar);
+console.log(NewUsuario);
+agregar();
 }
+
+var DatosUsuarios = [];
+function agregar(){
+  DatosUsuarios.push(NewUsuario);
+  console.log(DatosUsuarios);
+}
+
 </script>
 
-
-
       <div class="send-button cl">
-    <a href="Pagina-Confirm.html"> <button type="submit" id="boton" onclick="capturar();">ENVIAR</button> </a>
+    <a href="FormJS.html"> <button type="submit" id="boton" onclick="capturar();">ENVIAR</button> </a>
       </div>
     </form>
   </div>
